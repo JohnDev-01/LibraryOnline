@@ -20,7 +20,7 @@ class DBGestionLibreria {
   public function getTiendas() {
     try {
         $pdoConexion = $this->getConexion();
-        $sql = "SELECT * from autores;";
+        $sql = "SELECT * from titulos;";
         $stmt = $pdoConexion->query($sql);
         $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo "<script>console.log(" . json_encode($resultado) . ");</script>";
