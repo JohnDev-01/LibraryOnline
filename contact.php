@@ -54,7 +54,7 @@
                 <a class="nav-link" href="Libros.php">Libros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="projects.php">Projects</a>
+                <a class="nav-link" href="autores.php">Autores</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact</a>

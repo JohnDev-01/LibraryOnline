@@ -1,7 +1,7 @@
 <?php
   include 'db/conexion.php' ;
   $libreria = new DBGestionLibreria();
-$libros = $libreria->getLibros();
+$autores = $libreria->getAutores();
 ?>  
 
 <!DOCTYPE html>
@@ -15,7 +15,7 @@ $libros = $libreria->getLibros();
     <meta name="description" content="" />
     <meta name="author" content="" />
      
-    <title>Nuestros libros - Libreria</title>
+    <title>Autores - Libreria</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Custom Google font-->
@@ -38,7 +38,7 @@ $libros = $libreria->getLibros();
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-}
+    }
 
 h1 {
     text-align: center;
@@ -131,21 +131,24 @@ h1 {
       <div class="container px-5 my-5">
         <div class="text-center mb-5">
           <h1 class="display-5 fw-bolder mb-0">
-            <span class="text-gradient d-inline">Nuestros libros</span>
+            <span class="text-gradient d-inline">Autores</span>
           </h1>
         </div>
         <body>
-    <?php foreach ($libros as $libro): ?>
+    <?php foreach ($autores as $autor): ?>
         <div class="card">
             <div class="card-header">
-                <?php echo htmlspecialchars($libro['titulo']); ?>
+                <?php echo htmlspecialchars($autor['nombre'].$autor['apellido']); ?>
             </div>
             <div class="card-body">
-                <p><strong>Fecha de Publicación:</strong> <?php echo htmlspecialchars($libro['fecha_pub']); ?></p>
-                <p><strong>Notas:</strong> <?php echo htmlspecialchars($libro['notas']); ?></p>
+                <p><strong>Ciudad:</strong> <?php echo htmlspecialchars($autor['ciudad']); ?></p>
+                <p><strong>Direccion:</strong>  <?php echo htmlspecialchars($autor['direccion']); ?></p>
+                <p><strong>Estado:</strong>  <?php echo htmlspecialchars($autor['estado']); ?></p>
+                <p><strong>Pais:</strong>  <?php echo htmlspecialchars($autor['pais']); ?></p>
+                <p><strong>Código Postal:</strong>  <?php echo htmlspecialchars($autor['cod_postal']); ?></p>
             </div>
             <div class="card-footer">
-                Precio: <span class="price">$<?php echo htmlspecialchars($libro['precio']); ?></span>
+                Telefono: <?php echo htmlspecialchars($autor['telefono']); ?></p>
             </div>
         </div>
     <?php endforeach; ?>

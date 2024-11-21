@@ -54,7 +54,7 @@
                 <a class="nav-link" href="Libros.php">Libros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="projects.php">Projects</a>
+                <a class="nav-link" href="autores.php">Autores</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact</a>
@@ -93,8 +93,8 @@
                   >
                   <!-- <a
                     class="btn btn-outline-dark btn-lg px-5 py-3 fs-6 fw-bolder"
-                    href="projects.php"
-                    >Projects</a
+                    href="autores.php"
+                    >Autores</a
                   > -->
                 </div>
               </div>

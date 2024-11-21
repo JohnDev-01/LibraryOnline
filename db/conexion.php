@@ -17,10 +17,24 @@ class DBGestionLibreria {
     }
   }
 
-  public function getTiendas() {
+  public function getLibros() {
     try {
         $pdoConexion = $this->getConexion();
         $sql = "SELECT * from titulos;";
+        $stmt = $pdoConexion->query($sql);
+        $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        echo "<script>console.log(" . json_encode($resultado) . ");</script>";
+
+        return $resultado;
+    } catch (PDOException $e) {
+        die("Error en la consulta: " . $e->getMessage());
+        echo "<script>console.log('{$e->getMessage()}');</script>";
+    }
+  }
+  public function getAutores() {
+    try {
+        $pdoConexion = $this->getConexion();
+        $sql = "SELECT * from autores;";
         $stmt = $pdoConexion->query($sql);
         $resultado = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo "<script>console.log(" . json_encode($resultado) . ");</script>";
