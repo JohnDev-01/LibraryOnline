@@ -45,4 +45,25 @@ class DBGestionLibreria {
         echo "<script>console.log('{$e->getMessage()}');</script>";
     }
   }
+  public function insertarContacto($fecha, $correo, $nombre, $asunto, $comentario) {
+    try {
+        $pdoConexion = $this->getConexion();
+        $sql = "INSERT INTO contacto (fecha, correo, nombre, asunto, comentario) 
+                VALUES (:fecha, :correo, :nombre, :asunto, :comentario)";
+        $stmt = $pdoConexion->prepare($sql);
+
+        $stmt->bindParam(':fecha', $fecha);
+        $stmt->bindParam(':correo', $correo);
+        $stmt->bindParam(':nombre', $nombre);
+        $stmt->bindParam(':asunto', $asunto);
+        $stmt->bindParam(':comentario', $comentario);
+
+        $stmt->execute();
+
+        echo "Registro insertado correctamente.";
+    } catch (PDOException $e) {
+        die("Error al insertar el contacto: " . $e->getMessage());
+    }
+}
+
 }
