@@ -105,7 +105,7 @@
                 <div class="profile bg-gradient-primary-to-secondary">
                   <!-- TIP: For best results, use a photo with a transparent background like the demo example below-->
                   <!-- Watch a tutorial on how to do this on YouTube (link)-->
-                  <img class="profile-img" src="assets/john.png" alt="..." />
+                  <img class="profile-img" src="https://firebasestorage.googleapis.com/v0/b/finanzapp-5bbca.firebasestorage.app/o/john.png?alt=media&token=d0859fa9-3b45-4853-8072-8ff99380e83d" alt="..." />
                   <div class="dots-1">
                     <!-- SVG Dots-->
                     <svg
