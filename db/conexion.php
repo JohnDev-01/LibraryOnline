@@ -1,11 +1,10 @@
 <?php
 class DBGestionLibreria {
-  private $server = "ftpupload.net";
-  private $database = "if0_37751593_dblibreria";
-  private $user = "if0_37751593";
-  private $password = "Wy9Cls1lOnQ";
+  private $server = "localhost";
+  private $database = "dblibreria";
+  private $user = "root";
+  private $password = "";
 
-  // Método para obtener la conexión
   private function getConexion() {
     try {
         $dns = "mysql:host={$this->server};dbname={$this->database};charset=utf8mb4";
