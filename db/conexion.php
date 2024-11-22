@@ -1,9 +1,9 @@
 <?php
 class DBGestionLibreria {
-  private $server = "localhost";
-  private $database = "dblibreria";
-  private $user = "root";
-  private $password = "";
+  private $server = "sql104.infinityfree.com";
+  private $database = "if0_37766469_dblibreria";
+  private $user = "if0_37766469";
+  private $password = "VT1V9drjKW8JxA";
 
   private function getConexion() {
     try {
